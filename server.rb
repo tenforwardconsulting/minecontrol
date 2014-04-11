@@ -20,7 +20,7 @@ else
       'region' => ENV['MC_AWS_REGION']
     }
   }
-  put "using config from environment"
+  puts "using config from environment"
 end
 
 raise "Bad config" unless config['server'] && config['aws']
