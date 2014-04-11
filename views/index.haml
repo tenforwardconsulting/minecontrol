@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Mine Control
+  %body
+    %h1 Welcome to Mine Control
+    %p Current Server status: 
+    %dl
+      - @info.each do |k,v|
+        %dt= k
+        %dd= v
+
+    %a{href: "/start"} Start server
+    %a{href: "/stop"} Stop server
+
+- unless @info[:status] == :running || @info['status'] == :stopped
+  :javascript
+    setTimeout("location.reload();", 10000)

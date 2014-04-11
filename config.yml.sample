@@ -1,0 +1,6 @@
+server: 
+  instance_id: i-12345
+aws: 
+  access_key_id: ABCDE
+  secret_access_key: 98ASDF
+  region: us-west-2
