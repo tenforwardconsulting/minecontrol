@@ -7,17 +7,17 @@ if File.exist? config_file
   puts "Starting up with configuration from file"
 else
   config = {
-    'basic_auth': {
-      'username': ENV['MC_BASIC_AUTH_USERNAME'],
-      'password': ENV['MC_BASIC_AUTH_PASSWORD']
+    'basic_auth' => {
+      'username' => ENV['MC_BASIC_AUTH_USERNAME'],
+      'password' => ENV['MC_BASIC_AUTH_PASSWORD']
     },
-    'server': {
-      'instance_id': ENV['MC_SERVER_INSTANCE_ID']
+    'server' => {
+      'instance_id' => ENV['MC_SERVER_INSTANCE_ID']
     },
-    'aws': {
-      'access_key_id': ENV['MC_AWS_ACCESS_KEY_ID'],
-      'secret_access_key': ENV['MC_AWS_SECRET_ACCESS_KEY'],
-      'region': ENV['MC_AWS_REGION']
+    'aws' => {
+      'access_key_id' => ENV['MC_AWS_ACCESS_KEY_ID'],
+      'secret_access_key' => ENV['MC_AWS_SECRET_ACCESS_KEY'],
+      'region' => ENV['MC_AWS_REGION']
     }
   }
   put "using config from environment"
