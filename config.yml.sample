@@ -1,3 +1,6 @@
+basic_auth: 
+  username: admin
+  password: admin
 server: 
   instance_id: i-12345
 aws: 

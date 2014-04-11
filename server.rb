@@ -1,14 +1,13 @@
 require 'sinatra'
 require 'aws'
 
-use Rack::Auth::Basic, "Restricted Area" do |username, password|
-  username == 'admin' and password == 'admin'
-end
-
 config = YAML::load_file(File.join(File.dirname(__FILE__), 'config.yml'))
 AWS.config(config['aws'])
 puts "Starting up with configuration: "
-puts config
+
+use Rack::Auth::Basic, "MineControl" do |username, password|
+  username == config['basic_auth']['username'] and password == config['basic_auth']['password']
+end
 
 get '/' do
   instance = AWS.ec2.instances[config['server']['instance_id']]
