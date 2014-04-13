@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/tenforwardconsulting/dnsimple-ruby.git
+  revision: 3b5325168cae6e8bd3561949a9c41efa698d2768
+  specs:
+    dnsimple-ruby (1.5.3)
+      httparty (~> 0.12)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -13,6 +20,9 @@ GEM
     ffi (1.9.3)
     haml (4.0.5)
       tilt
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     json (1.8.1)
     listen (2.7.1)
       celluloid (>= 0.15.2)
@@ -20,6 +30,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mini_portile (0.5.3)
+    multi_xml (0.5.5)
     nio4r (1.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
@@ -44,6 +55,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
+  dnsimple-ruby!
   haml
   rerun
   sinatra

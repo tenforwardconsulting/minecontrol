@@ -12,6 +12,7 @@
 
     %a{href: "/start"} Start server
     %a{href: "/stop"} Stop server
+    %a{href: "/set_dns"} Update DNS
 
 - unless @info[:status] == :running || @info['status'] == :stopped
   :javascript

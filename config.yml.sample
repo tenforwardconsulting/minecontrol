@@ -7,3 +7,10 @@ aws:
   access_key_id: ABCDE
   secret_access_key: 98ASDF
   region: us-west-2
+dns: 
+  hostname: 'minecraft'
+  domain: '10fw.net'
+  dnsimple: 
+    domain_token: 12345
+    # username: this will work
+    # password/api_token: eventually maybe
