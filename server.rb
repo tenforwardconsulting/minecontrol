@@ -65,7 +65,7 @@ get '/' do
     dns: aws_instance.dns_name,
     launch_time: aws_instance.launch_time,
     zone: aws_instance.availability_zone,
-    custom_dns: config['dns']['hostname'] + ". " + config['dns']['domain'],
+    custom_dns: config['dns']['hostname'] + "." + config['dns']['domain'],
     custom_dns_ip: dns_record.content
   }
 
