@@ -83,8 +83,10 @@ get '/start' do
 end
 
 get '/set_dns' do 
-  dns_record.content = aws_instance.ip_address
-  dns_record.save
+  record = dns_record
+  record.content = aws_instance.ip_address
+  record.save
+  
   redirect '/'
 end
 
